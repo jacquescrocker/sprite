@@ -69,7 +69,7 @@ these files. Just add a link to `sprites.css` into your html <head> and you're r
 Configuration of `sprite` is done via `config/sprite.yml`. It allows you to set sprite configuration options, and fine tune exactly which sprites get generated where.
 
 * `config:` section defines all the global properties for sprite generation. Such as how it generates the styles, where it looks for images, where it writes it output file to, and what image file format it uses by default
-  - `style:` defines how the style rules are outputted. built in options are `css`, `sass`, and `sass_mixin`. (defaults to `css`)
+  - `style:` defines how the style rules are outputted. built in options are `css`, `sass`, `stylus`, and `sass_mixin`. (defaults to `css`)
   - `style_output_path:` defines the file path where your style settings get written (defaults to `stylesheets/sprites`). the file extension not needed as it will be set based on the `style:` setting
   - `image_output_path:` defines the folder path where the combined sprite images files are written (defaults to `images/sprites/`)
   - `css_image_path:` defines the path used in css to find sprite image files (defaults to `/images/sprites/`)
