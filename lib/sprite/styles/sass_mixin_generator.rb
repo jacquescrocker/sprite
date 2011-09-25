@@ -9,17 +9,12 @@ module Sprite
       def write(path, sprite_files)
         # write the sass mixins to disk
         File.open(File.join(Sprite.root, path), 'w') do |f|
-          add_else = false
 
           f.puts "= sprite($group_name, $image_name, $offset: 0)"
           sprite_files.each do |sprite_file, sprites|
             background_url = @builder.background_url(sprite_file)
             sprites.each do |sprite|
               f << "  @"
-              if add_else
-                f << "else "
-              end
-              add_else = true
               #{sprite[:x]}px #{sprite[:y]}px
 
               if sprite[:align] == 'horizontal'
