@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "sprite"
-  s.version = "0.2.4"
+  s.version = "0.2.5"
 
   s.executables = ["sprite"]
 
