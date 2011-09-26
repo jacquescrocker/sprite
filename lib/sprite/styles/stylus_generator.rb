@@ -20,15 +20,14 @@ module Sprite
                 f << "else "
               end
               add_else = true
-
               if sprite[:align] == 'horizontal'
-                background_offset = "{#{sprite[:x]}+offset}px #{sprite[:y]}px"
+                background_offset = "#{sprite[:x]}px+offset #{sprite[:y]}px"
               else
-                background_offset = "#{sprite[:x]}px {#{sprite[:y]}+offset}px"
+                background_offset = "#{sprite[:x]}px #{sprite[:y]}px+offset"
               end
 
               f.puts %{if group_name == "#{sprite[:group]}" and image_name == "#{sprite[:name]}"}
-              f.puts "    background: #{background_url} repeat #{background_offset}"
+              f.puts "    background: #{background_url} no-repeat #{background_offset}"
               f.puts "    width: #{sprite[:width]}px"
               f.puts "    height: #{sprite[:height]}px"
             end
