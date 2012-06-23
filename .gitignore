@@ -4,3 +4,4 @@ pkg
 rspec_autotest.rb
 /coverage/
 /*.gemspec
+*.gem
