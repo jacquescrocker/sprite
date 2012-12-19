@@ -145,7 +145,7 @@ module Sprite
 
     # if no image configs are detected, set some intelligent defaults
     def default_images
-      sprites_path = image_source_path("sprites")
+      sprites_path = File.expand_path(image_source_path("sprites"))
       collection = []
 
       if File.exists?(sprites_path)
@@ -165,6 +165,7 @@ module Sprite
           }
         end
       end
+
       collection
     end
 
@@ -174,7 +175,7 @@ module Sprite
       @images.each do |image|
         # expand out all the globs
         image['sources'] = image['sources'].to_a.map{ |source|
-          Dir.glob(image_source_path(source))
+          Dir.glob(File.expand_path(image_source_path(source)))
         }.flatten.compact
       end
     end

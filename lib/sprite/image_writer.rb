@@ -3,19 +3,19 @@ module Sprite
     def initialize(config)
       @config = config
     end
-    
+
     def write(image, name, format, quality = nil, background_color = nil)
       # set up path
       path = image_output_path(name, format)
       FileUtils.mkdir_p(File.dirname(path))
-      
+
       # write sprite image file to disk
       image.write(path) {
         self.quality = quality unless quality.nil?
         self.background_color = background_color unless background_color.nil?
       }
     end
-    
+
     # get the disk path for a location within the image output folder
     def image_output_path(name, format, relative = false)
       path_parts = []
