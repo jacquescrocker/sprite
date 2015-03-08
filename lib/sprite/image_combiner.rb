@@ -18,7 +18,7 @@ module Sprite
       if @image_config.background_color
         image.opacity = 0
       else
-        image.opacity = Magick::MaxRGB
+        image.opacity = Magick::QuantumRange
       end
 
       image.composite!(dest_image, 0, 0, Magick::OverCompositeOp)
