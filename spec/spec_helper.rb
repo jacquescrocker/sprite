@@ -24,6 +24,8 @@ RSpec.configure do |c|
   c.before(:all) do
   end
 
+  c.mock_with :rspec
+
   # returns the file path of a fixture setting file
   def config_path(filename)
     @fixture_path.join(filename)

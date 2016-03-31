@@ -1,9 +1,12 @@
-source :rubygems
+source "https://rubygems.org"
 gemspec
 
-gem "rake"
+ruby "2.2.4"
 
-gem "ruby-debug", :platforms => :mri_18
-gem "ruby-debug19", :platforms => :mri_19
+gem "rake", "0.9.2"
 
-gem "rmagick"
+gem "byebug"
+
+gem "rspec", "2.14.1"
+
+gem "rmagick", ">= 2.15"

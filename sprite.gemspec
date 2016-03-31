@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "sprite"
-  s.version = "0.2.7"
+  s.version = "0.3.0"
 
   s.executables = ["sprite"]
 
@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.description = "sprite is a ruby executable that to easily generate sprites along with css, sass"
 
   s.email = "railsjedi@gmail.com"
-  s.homepage = "http://github.com/railsjedi/sprite"
+  s.homepage = "http://github.com/jacquescrocker/sprite"
   s.rubyforge_project = "none"
 
   s.require_paths = ["lib"]
